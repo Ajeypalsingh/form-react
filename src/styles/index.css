@@ -1,0 +1,133 @@
+@import "./reset.css";
+
+:root {
+  --app-dark-bg: #1a1d28;
+  --app-green: #33ab4e;
+  --app-purple: #833cff;
+  --app-orange: #ff833c;
+  --app-blue: #3c57ff;
+  --app-blue-hover: #364ee6;
+  --app-red: #ff3c57;
+  --app-red-hover: #ff2846;
+  --app-grey: #bebebe;
+  --app-white: #f1f1f1;
+  --app-border-radius: 5px;
+  --app-grey-bg: #f6f6f6;
+}
+
+.container {
+  width: min(100% - 30px, 1080px);
+  margin-inline: auto;
+}
+
+body {
+  background: #f1f2f3;
+  font-family: Nunito, Inter, sans-serif;
+  padding: 30px 0;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  background: #0f2027;
+  background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  width: 650px;
+  padding: 25px;
+  border-radius: 10px;
+
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+}
+
+form h2 {
+  text-align: center;
+  border-bottom: 3px solid #fff;
+  color: #fff;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.form-content {
+  width: 100%;
+  margin-top: 15px;
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 50%;
+  padding-bottom: 15px;
+}
+
+.inputs:nth-child(2n) {
+  justify-content: end;
+}
+
+.inputs label,
+.gender-title {
+  font-weight: 600;
+  color: #fff;
+  font-size: 20px;
+  margin-left: 3px;
+}
+
+.inputs input[type="text"],
+input[type="number"] {
+  height: 35px;
+  width: 95%;
+  border-radius: 5px;
+  padding: 0 10px;
+  font-size: 16px;
+}
+
+.invalid {
+  height: 20px;
+  width: 250px;
+  display: block;
+  padding: 3px 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--app-red);
+}
+
+.gender-catagory label {
+  padding: 0 20px 0 3px;
+}
+
+.gender-catagory,
+.gender-catagory label {
+  cursor: pointer;
+}
+
+button {
+  height: 35px;
+  width: 200px;
+  padding: 0 20px;
+  background-color: var(--app-green);
+  font-size: 18px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  color: var(--app-white);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .form-container {
+    width: 450px;
+  }
+
+  .inputs {
+    width: 100%;
+  }
+}
